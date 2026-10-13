@@ -4,16 +4,16 @@
 
 Valmis TypeScript-pohja [Model Context Protocol](https://modelcontextprotocol.io) -palvelimille. Paina GitHubissa **Use this template**, niin saat oman repon, jossa rakenne, testit, CI ja julkaisutyönkulku ovat jo valmiina.
 
-**English summary:** A ready-to-use TypeScript template for building MCP servers. It includes two example tools, tests that talk to the server through the real MCP protocol, a CI workflow (Node 20/22/24) and a tag-triggered release workflow. Click "Use this template" on GitHub and start adding your own tools in `src/server.ts`.
+**English summary:** A ready-to-use TypeScript template for building MCP servers. It includes two example tools, tests that talk to the server through the real MCP protocol, a CI workflow (Node 22/24) and a tag-triggered release workflow. Click "Use this template" on GitHub and start adding your own tools in `src/server.ts`.
 
-**Teknologiat:** TypeScript, Node.js 20/22/24, Model Context Protocol (stdio), zod, vitest. Lisenssi: [LICENSE](./LICENSE).
+**Teknologiat:** TypeScript, Node.js 22/24, Model Context Protocol (stdio), zod, vitest. Lisenssi: [LICENSE](./LICENSE).
 
 ## Mitä mukana on
 
 - `src/server.ts` rekisteröi kaksi esimerkkityökalua (`greet` ja `add`)
 - `src/tools/` sisältää työkalujen logiikan puhtaina funktioina, jotka on helppo testata
 - `test/` sisältää yksikkötestit ja palvelintestin, joka kutsuu työkaluja oikean MCP-asiakkaan kautta (muistinsisäinen yhteys)
-- `.github/workflows/ci.yml` ajaa tyyppitarkistuksen, käännöksen ja testit Node-versioilla 20, 22 ja 24
+- `.github/workflows/ci.yml` ajaa tyyppitarkistuksen, käännöksen ja testit Node-versioilla 22 ja 24
 - `.github/workflows/release.yml` luo GitHub-julkaisun, kun pushaat version-tagin
 
 ## Käyttöönotto
