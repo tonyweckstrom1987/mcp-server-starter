@@ -25,6 +25,14 @@ describe("MCP-palvelin", () => {
     expect(tools.map((t) => t.name).sort()).toEqual(["add", "greet"]);
   });
 
+  it("greet-työkalun parametrit näkyvät", async () => {
+    const client = await connect();
+    const { tools } = await client.listTools();
+    const greet = tools.find((t) => t.name === "greet");
+    const params = Object.keys(greet?.inputSchema.properties ?? {});
+    expect(params.sort()).toEqual(["language", "name"]);
+  });
+
   it("kutsuu greet-työkalua", async () => {
     const client = await connect();
     const result = await client.callTool({ name: "greet", arguments: { name: "Tony", language: "en" } });
