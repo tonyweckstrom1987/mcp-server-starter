@@ -1,0 +1,8 @@
+{
+  "calls": [
+    { "tool": "greet", "arguments": { "name": "Tony" } },
+    { "tool": "greet", "arguments": { "name": "Tony", "language": "en" } },
+    { "tool": "add", "arguments": { "numbers": [1, 2, 3] } },
+    { "tool": "greet", "arguments": { "name": "   " }, "expectError": true }
+  ]
+}

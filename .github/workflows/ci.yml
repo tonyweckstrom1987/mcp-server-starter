@@ -37,3 +37,11 @@ jobs:
 
       - name: Testit
         run: npm test
+
+      - name: Tarkista MCP-palvelin (mcp-doctor)
+        if: matrix.node-version == 24
+        uses: tonyweckstrom1987/mcp-doctor@c1b820120c25bb198a6595cf29373a85ecf2b075
+        with:
+          command: node dist/index.js
+          smoke: smoke.json
+          strict: "true"
