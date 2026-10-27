@@ -40,7 +40,7 @@ jobs:
 
       - name: Tarkista MCP-palvelin (mcp-doctor)
         if: matrix.node-version == 24
-        uses: tonyweckstrom1987/mcp-doctor@c1b820120c25bb198a6595cf29373a85ecf2b075
+        uses: tonyweckstrom1987/mcp-doctor@6064a11717f76fb06ffd00b38b4e562d88573a26
         with:
           command: node dist/index.js
           smoke: smoke.json
